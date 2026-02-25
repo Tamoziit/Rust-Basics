@@ -28,3 +28,5 @@ String s = "guess"
 - Strings in Rust are **growable & UTF-8 encoded**.
 - read_line() return a **`Result`** value. Result is an **enumeration**, often called an **enum**, which is a type that can be in one of multiple possible states. We call each possible state a **variant**.
 - Result’s variants are **Ok** and **Err**. The Ok variant indicates the operation was successful, and it contains the successfully generated value. The Err variant means the operation failed, and it contains information about how or why the operation failed.
+- A **crate** is a collection of Rust source code files. Normal Rust project [generated through cargo new ...] is a **binary crate**, which is an executable.
+- The **rand crate** [for random numbers] is a **library crate**, which contains code that is intended to be used in other programs and can’t be executed on its own.
