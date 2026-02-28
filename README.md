@@ -30,3 +30,13 @@ String s = "guess"
 - Result’s variants are **Ok** and **Err**. The Ok variant indicates the operation was successful, and it contains the successfully generated value. The Err variant means the operation failed, and it contains information about how or why the operation failed.
 - A **crate** is a collection of Rust source code files. Normal Rust project [generated through cargo new ...] is a **binary crate**, which is an executable.
 - The **rand crate** [for random numbers] is a **library crate**, which contains code that is intended to be used in other programs and can’t be executed on its own.
+
+## Datatypes in Rust
+- Rust is **statically-typed at runtime**; their `<DType>` cannot be change at runtime.
+- **Unsigned integers**: Only +ve integers
+- **Signed integers**: Both +ve & -ve integers (in 2's complement representation).
+- **usize, isize**: variables assumes unsigned/signed integers of bits compatible with the system arch (x8, x16, x32, x64...).
+- `let a = 254u8; // a gets u8 type`
+- `let a = 10_00_000; // value remains 1000000, but better visualized as 10,00,000`
+- **0x...** - Hex Representation; **0o...** - Octal, **0b...** - Binary, **b'...'** - u8 Byte.
+- All **Floating point** nos. are **signed**.
