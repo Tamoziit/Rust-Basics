@@ -45,5 +45,18 @@ String s = "guess"
 - In Rust `if` condition needs **bool** condition --> **truthy/falsy  values not valid**.
 eg: `if x == 0 { ... } // valid`
 <br />but,<br />
-`let x = 3;<br />
+`let x = 3;
 if x { ... } // Not valid`
+
+## Ownership in Rust
+**Ownership** is a **set of rules** that govern how a **Rust program manages memory**.<br />
+All programs have to manage the way they use a computer’s memory while running.
+- Some languages have garbage collection that regularly looks for no-longer-used memory as the program runs (Java);
+- in other languages, the programmer must explicitly allocate and free the memory (C/C++).
+
+Rust uses a third approach: **Memory is managed through a system of ownership with a set of rules that the compiler checks**. *If any of the rules are violated, the program won’t compile*. None of the features of ownership will slow down your program while it’s running.
+
+**Ownership Rules in Rust**:
+- Each value in Rust has an owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
