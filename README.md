@@ -40,3 +40,10 @@ String s = "guess"
 - `let a = 10_00_000; // value remains 1000000, but better visualized as 10,00,000`
 - **0x...** - Hex Representation; **0o...** - Octal, **0b...** - Binary, **b'...'** - u8 Byte.
 - All **Floating point** nos. are **signed**.
+
+## Control Flow
+- In Rust `if` condition needs **bool** condition --> **truthy/falsy  values not valid**.
+eg: `if x == 0 { ... } // valid`
+<br />but,<br />
+`let x = 3;<br />
+if x { ... } // Not valid`
