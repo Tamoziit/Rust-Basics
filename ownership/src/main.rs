@@ -43,6 +43,16 @@ fn main() {
     let (st, l) = references::ownership_fiasco(st); // ownership given & taken back [throught the tuple return]
 
     println!("Length of {st} = {l}");
+
+    // Reference calling
+    let mut st = String::from("HellYeaaaaaaaah");
+    let l = references::reference_fn(&st); // passing immutable reference
+    println!("Length of {st} = {l}");
+
+    let l = references::mutable_ref(&mut st); // passing mutable reference
+    println!("Length of {st} = {l}");
+
+    references::_multi_mutable_ref();
 }
 
 /*
