@@ -1,4 +1,5 @@
 mod example;
+mod method_syntax;
 
 struct User {
     active: bool,
@@ -78,6 +79,29 @@ fn main() {
     );
 
     example::struct_debug_display(&rect);
+
+    // Method Syntax
+    let rect1 = method_syntax::Rectangle2 {
+        width: 32,
+        height: 50,
+    };
+
+    let rect2 = method_syntax::Rectangle2 {
+        width: 90,
+        height: 80,
+    };
+
+    println!(
+        "The area of rectangle {:?} = {}",
+        rect1,
+        rect1.calculate_area()
+    );
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect2 hold rect1? {}", rect2.can_hold(&rect1));
+
+    let sq = method_syntax::Rectangle2::square(5);
+    println!("Square: {:#?}", sq);
 }
 
 fn build_user(username: String, email: String) -> User {
