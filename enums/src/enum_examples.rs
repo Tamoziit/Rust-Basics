@@ -7,6 +7,7 @@ enum _Message {
     ChangeColor(i32, i32, i32),
 }
 
+/* Option<T> */
 pub fn option_enum() {
     println!("{:?}", Option::Some("1"));
     println!("{:?}", Option::<&str>::None); // since none has no value --> we implicitly specify its type
