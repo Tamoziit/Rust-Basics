@@ -7,7 +7,7 @@ pub fn if_let() {
     }
 
     // with if let
-    if let Some(max) =  config_max  {
+    if let Some(max) = config_max  {
         println!("With if let: The max is configured to be {max}");
     } // here we do not need to handle _/None condition
 }
