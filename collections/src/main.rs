@@ -1,6 +1,7 @@
 mod enum_vec;
 use enum_vec::execute;
 use collections::strings::{utf8, indexing};
+use collections::hashmaps::basics;
 
 fn main() {
     let mut vec = Vec::new(); // vector: homogenous collection
@@ -50,7 +51,12 @@ fn main() {
 
     println!("{:?}", v1);
 
+    // UTF-8 encoded strings
     execute();
     utf8::utf8_strings();
     indexing::indexing();
+
+    // HashMaps
+    basics::teams();
+    basics::word_count();
 }
