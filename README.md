@@ -62,3 +62,9 @@ Rust uses a third approach: **Memory is managed through a system of ownership wi
 - When the owner goes out of scope, the value will be dropped.
 
 **Slice Type**: Slices let us **reference a contiguous sequence of elements** in a collection. A slice is a kind of reference, so it *does not have ownership*.
+
+## Lifetimes in Rust
+**Lifetime Rules**:
+- The first rule is that the compiler assigns a lifetime parameter to each parameter that’s a reference. In other words, a function with one parameter gets one lifetime parameter: `fn foo<'a>(x: &'a i32);` a function with two parameters gets two separate lifetime parameters: `fn foo<'a, 'b>(x: &'a i32, y: &'b i32);` and so on.
+- The second rule is that, if there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters: `fn foo<'a>(x: &'a i32) -> &'a i32`.
+- The third rule is that, if there are multiple input lifetime parameters, but one of them is `&self` or `&mut self` because this is a method, the lifetime of `self` is assigned to all output lifetime parameters. This third rule makes methods much nicer to read and write because fewer symbols are necessary.
